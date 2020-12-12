@@ -1,0 +1,193 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 10%;
+    border: 1px solid #dadfe3;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px 0px #dadfe3;
+    background-color: #d68060;
+}
+.content{  
+    height: 600px;
+    width: 100%;
+}
+.header{
+    margin: 20px 30px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    color: #dff3e3;
+}
+.tabSection{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.activeTab
+{
+    background-color: #dff3e3;
+    color: #41584b;
+    border-bottom: 2px solid #86aba1;
+}
+.inActiveTab{
+    background-color: #f1ae89;
+    color: #475867;
+    border-bottom: 2px solid transparent;
+}
+.tabNav{
+    display: flex;
+    width: 100%;
+    background-color: #f1ae89;
+    width: 100%;
+    border-top: 1px solid #86aba1;
+    /* overflow-y: hidden; */
+}
+.tabSlider{
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.chevronWrapper{
+    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 32px;
+}
+.tabList {
+    /* overflow: hidden; */
+    /* overflow: hidden !important;
+    overflow-x: scroll !important; */
+    display: flex;
+ 
+}
+.smoothScroll {
+    overflow: hidden;
+    display: flex;
+    transform: translae3d(0, 0, 0);
+    transition: all 200ms linear;
+    scroll-behavior: smooth;
+}
+.tabListContainer{
+    position: relative;
+    align-items: center;
+    display: flex;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-right: 1px solid #86aba1;
+    height: 100%;
+    background-color: #f1ae89;
+    cursor: pointer;
+}
+.tabListItemWrapper {
+    height: 100%;
+    display: flex;
+/* 
+    width: 200;
+    display: "flex";
+    justify-content: "center"; */
+}
+.tabListItem{
+    align-items: center;
+    display: flex;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 24px;
+    cursor: pointer;
+    outline: none !important;
+}
+.tabListText{
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+    text-align: center;
+}
+.tabAddButtonWrapper{
+    border-right: 1px solid #86aba1;
+    z-index: 1;
+    padding-right: 10px !important;
+    width: 56px;
+    justify-content: center;
+  
+}
+.tabAddButton{
+    display: flex;
+}
+.tabDeleteButton{
+    /* visibility: hidden; */
+ 
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    color: #475867;
+    font-size: 12px;
+}
+.contentBody{
+    margin: 30px;
+    padding: 20px;
+    font-size: 23px;
+    color: #dff3e3;
+    border-radius: 4px;
+}
+.notAllowed{
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.20em 0.20em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.45em;
+}
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}
+.plus {
+    position:relative;
+   right: -10px;
+    top:16px;
+    border: 1px dotted #f1ae89;
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    box-sizing: border-box;
+    transform: scale(3.5);
+    cursor: pointer;
+  }
+  .scrollContainer {
+    overflow: hidden !important;
+    overflow-x: scroll !important;
+  }
+
+  .tabListContainer .tabDeleteButton{
+    cursor: pointer;
+    display: none;
+  }
+
+  .tabListContainer:hover .tabDeleteButton {
+    display: inline-block;
+  }
