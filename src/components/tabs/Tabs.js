@@ -93,7 +93,7 @@ const Tabs = (props) => {
     const sliderVisible = () => {
         if (tabListRef) {
           let isSliderBoxShadowVisible = tabListRef.current.scrollLeft + tabListRef.current.clientWidth < tabListRef.current.scrollWidth;
-          if (isSliderBoxShadowVisible != isRightButtonEnable) {
+          if (isSliderBoxShadowVisible !== isRightButtonEnable) {
             setIsRightButtonEnable(isSliderBoxShadowVisible)
           }
         }
@@ -126,7 +126,7 @@ const Tabs = (props) => {
                         return (
                             <div key={i}  className="tabListContainer">
                                 <div  className="tabListItemWrapper">
-                                    <div className={`tabListItem ${i == currentTab ? 'activeTab' : 'inActiveTab'}`} onClick={(e)=>handleListItemClick(i, e)} >
+                                    <div className={`tabListItem ${i === currentTab ? 'activeTab' : 'inActiveTab'}`} onClick={(e)=>handleListItemClick(i, e)} >
                                         <div className="tabListText"> 
                                         {item.label}
                                         </div>
